@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Persatuan Karate Do Daerah Kuala Muda — karate training, classes, locations and contact information in Kuala Muda, Kedah.">
+<title>PERSATUAN KARATE DO DAERAH KUALA MUDA</title>
+<style>
+:root{
+  --red:#c9142b;
+  --dark:#090909;
+  --dark2:#151515;
+  --cream:#f7f2e9;
+  --gold:#d7a83e;
+  --white:#fff;
+  --muted:#bdbdbd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--dark);
+  color:var(--white);
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(5,5,5,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(215,168,62,.22);
+}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;letter-spacing:1.2px;font-size:14px;max-width:340px}
+.logo span{color:var(--red)}
+.nav-links{display:flex;gap:25px;font-size:14px;font-weight:700}
+.nav-links a{opacity:.85;transition:.2s}
+.nav-links a:hover{color:var(--gold);opacity:1}
+.menu{display:none;font-size:25px;cursor:pointer}
+
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.82) 43%,rgba(0,0,0,.25) 100%),
+    url("assets/team.jpg") center/cover no-repeat;
+}
+.hero:after{
+  content:"";position:absolute;inset:auto 0 0;height:180px;
+  background:linear-gradient(transparent,var(--dark));
+}
+.hero-content{position:relative;z-index:2;padding-top:70px;max-width:720px}
+.kicker{color:var(--gold);font-weight:800;letter-spacing:4px;font-size:13px;text-transform:uppercase;margin-bottom:15px}
+h1{font-size:clamp(42px,7vw,82px);line-height:.94;text-transform:uppercase;letter-spacing:-2px}
+.hero h1 span{color:var(--red)}
+.hero p{margin-top:24px;color:#ddd;font-size:18px;max-width:650px}
+.btns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:13px 21px;border-radius:4px;font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.6px}
+.btn-red{background:var(--red)}
+.btn-outline{border:1px solid #777}
+.btn:hover{transform:translateY(-2px)}
+section{padding:90px 0}
+.section-head{margin-bottom:38px}
+.eyebrow{color:var(--red);font-weight:900;letter-spacing:3px;text-transform:uppercase;font-size:12px}
+h2{font-size:clamp(30px,4vw,50px);line-height:1.05;text-transform:uppercase;margin-top:8px}
+.lead{color:#bbb;max-width:720px;margin-top:14px}
+
+.about{background:var(--cream);color:#151515}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about .lead{color:#555}
+.about-photo{border:8px solid #151515;box-shadow:18px 18px 0 var(--red)}
+.about-photo img{width:100%;display:block}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.point{padding:18px;border-left:4px solid var(--red);background:#fff}
+.point b{display:block;text-transform:uppercase;font-size:14px}
+.point span{color:#666;font-size:13px}
+
+.team{background:#0e0e0e}
+.team-image{margin-top:30px;border:1px solid #292929;background:#111}
+.team-image img{display:block;width:100%;height:auto}
+
+.locations{background:#111}
+.location-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.location{
+  min-height:150px;padding:24px;background:linear-gradient(145deg,#1b1b1b,#0b0b0b);
+  border:1px solid #292929;position:relative;overflow:hidden
+}
+.location:before{content:"空";position:absolute;right:-10px;bottom:-28px;font-size:100px;color:rgba(201,20,43,.08);font-weight:900}
+.location .num{color:var(--gold);font-weight:900;font-size:12px}
+.location h3{font-size:19px;text-transform:uppercase;margin-top:7px;max-width:230px}
+
+.fees{background:var(--cream);color:#151515}
+.fee-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:800px}
+.fee{
+  background:#fff;padding:30px;border-top:6px solid var(--red);
+  box-shadow:0 10px 25px rgba(0,0,0,.08)
+}
+.fee .price{font-size:52px;font-weight:900;line-height:1;color:var(--red);margin:12px 0 5px}
+.fee .price small{font-size:20px;color:#444}
+.fee p{color:#666}
+.note{margin-top:20px;color:#666;font-size:13px}
+
+.contact{background:
+  linear-gradient(135deg,rgba(201,20,43,.96),rgba(92,7,18,.96));
+}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.contact h2{max-width:650px}
+.contact-text{color:#f4dfe2;margin-top:16px;max-width:600px}
+.contact-card{background:#090909;padding:30px;border:1px solid rgba(255,255,255,.15)}
+.contact-item{padding:15px 0;border-bottom:1px solid #292929}
+.contact-item:last-child{border:0}
+.contact-item small{display:block;color:#999;text-transform:uppercase;letter-spacing:2px;font-size:10px}
+.contact-item strong{font-size:19px}
+.contact-button{display:inline-block;margin-top:18px;background:var(--gold);color:#111;padding:13px 20px;font-weight:900}
+
+footer{background:#050505;padding:30px 0;color:#888;font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-brand{color:#fff;font-weight:800}
+
+@media(max-width:800px){
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:#090909;padding:20px;flex-direction:column;gap:15px}
+  .nav-links.open{display:flex}
+  .menu{display:block}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .location-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .location-grid,.fee-grid,.about-points{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .hero{background-position:65% center}
+  .hero p{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">PERSATUAN <span>KARATE DO</span> DAERAH KUALA MUDA</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">ABOUT US</a>
+      <a href="#team">OUR TEAM</a>
+      <a href="#locations">LOCATIONS</a>
+      <a href="#fees">FEES</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+    <div class="menu" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-content">
+    <div class="kicker">Discipline • Strength • Respect</div>
+    <h1>Train Hard.<br><span>Stand Strong.</span></h1>
+    <p>Welcome to Persatuan Karate Do Daerah Kuala Muda — developing disciplined, confident and skilled karate athletes through structured training and strong team values.</p>
+    <div class="btns">
+      <a class="btn btn-red" href="#locations">Find A Training Place</a>
+      <a class="btn btn-outline" href="#contact">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="section-head">
+        <div class="eyebrow">About Us</div>
+        <h2>More Than<br>Karate</h2>
+        <p class="lead">Persatuan Karate Do Daerah Kuala Muda brings karate training closer to students and the local community. Our focus is not only technique, but also discipline, confidence, respect, teamwork and continuous improvement.</p>
+      </div>
+      <div class="about-points">
+        <div class="point"><b>Discipline</b><span>Build strong habits and commitment.</span></div>
+        <div class="point"><b>Technique</b><span>Develop proper karate fundamentals.</span></div>
+        <div class="point"><b>Confidence</b><span>Grow courage through training.</span></div>
+        <div class="point"><b>Team Spirit</b><span>Train and progress together.</span></div>
+      </div>
+    </div>
+    <div class="about-photo">
+      <img src="assets/masters.png" alt="Persatuan Karate Do Daerah Kuala Muda masters and committee">
+    </div>
+  </div>
+</section>
+
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Team</div>
+      <h2>One Club.<br>One Team.</h2>
+      <p class="lead">Our instructors, committee members and athletes work together to create a positive training environment for karate students.</p>
+    </div>
+    <div class="team-image">
+      <img src="assets/team.jpg" alt="Persatuan Karate Do Daerah Kuala Muda team at a karate tournament">
+    </div>
+  </div>
+</section>
+
+<section class="locations" id="locations">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Training Locations</div>
+      <h2>Train Near You</h2>
+      <p class="lead">We conduct karate activities at several locations around Kuala Muda.</p>
+    </div>
+    <div class="location-grid">
+      <div class="location"><div class="num">01</div><h3>Taman Keladi</h3></div>
+      <div class="location"><div class="num">02</div><h3>SJKT Kalaimagal</h3></div>
+      <div class="location"><div class="num">03</div><h3>SJKT Sungai Tok Pawang</h3></div>
+      <div class="location"><div class="num">04</div><h3>Taman Songket</h3></div>
+      <div class="location"><div class="num">05</div><h3>SJKT Taman Keladi</h3></div>
+      <div class="location"><div class="num">06</div><h3>SJKT Arumugam Pillai</h3></div>
+    </div>
+  </div>
+</section>
+
+<section class="fees" id="fees">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Training Fees</div>
+      <h2>Simple & Accessible</h2>
+      <p class="lead">Monthly training fees for students joining our karate programme.</p>
+    </div>
+    <div class="fee-grid">
+      <div class="fee">
+        <div class="eyebrow">School Students</div>
+        <div class="price">RM 30 <small>/ month</small></div>
+        <p>For students training through our school-based locations.</p>
+      </div>
+      <div class="fee">
+        <div class="eyebrow">Outside School</div>
+        <div class="price">RM 60 <small>/ month</small></div>
+        <p>For training outside the school-based programme.</p>
+      </div>
+    </div>
+    <p class="note">For the latest class schedule, registration details and any applicable event or grading fees, please contact the club.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">Contact Us</div>
+      <h2>Ready To Start<br>Your Karate Journey?</h2>
+      <p class="contact-text">For class enquiries, registration, training locations and club activities, contact Persatuan Karate Do Daerah Kuala Muda.</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-item">
+        <small>Phone / WhatsApp</small>
+        <strong>018-947 5156</strong>
+      </div>
+      <div class="contact-item">
+        <small>Organisation</small>
+        <strong>Persatuan Karate Do Daerah Kuala Muda</strong>
+      </div>
+      <a class="contact-button" href="https://wa.me/60189475156" target="_blank" rel="noopener">MESSAGE US ON WHATSAPP →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">PERSATUAN KARATE DO DAERAH KUALA MUDA</div>
+    <div>© 2026 Kuala Muda Karate Do. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{});
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+</body>
+</html>
